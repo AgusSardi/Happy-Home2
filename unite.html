@@ -99,6 +99,14 @@
             menu.classList.toggle('hidden'); // Alterna la visibilidad
     });
 
+    fetch('layout/footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer-placeholder').innerHTML = data;
+        })
+        .catch(error => console.error('Error al cargar el footer:', error));
+        
+
     document.getElementById('contactForm').addEventListener('submit', function(event) {
         event.preventDefault(); // Evitar el envío real del formulario
 
