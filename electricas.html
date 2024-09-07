@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HappyHome</title>
+    <link rel="stylesheet" href="CSS/navbar.css">
+    <link rel="stylesheet" href="CSS/footer.css">
+    <link rel="stylesheet" href="CSS/electricas.css">
+    
+</head>
+<body>
+    
+    <header>
+        <nav class="navbar">
+            <div class="navbar-brand">
+                <div class="brand-text">
+                    <img src="img/1 (1).png" alt="Logo"> <!-- Reemplaza la ruta con la ubicación correcta de tu imagen -->
+                </div>
+            </div>
+            <div id="lista_nav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="index.html" id="inicio" class="navbar-link">Inicio</a></li>
+                    <li class="nav-item"><a href="servicios.html" id="servicios" class="navbar-link">Servicios</a></li>
+                    <li class="nav-item"><a href="sobre_nosotros.html" id="sobre_nosotros" class="navbar-link">Sobre Nosotros</a></li>
+                    <li class="nav-item"><a href="contacto.html" id="contacto" class="navbar-link">Contacto</a></li>
+                    <li class="nav-item"><a href="unite.html" id="unite" class="navbar-link">Unite a nosotros</a></li>
+                </ul>
+            </div>
+            <div id="img_justify">
+                <img src="img/justify.svg" alt="Logo" style="height: 50px;"> <!-- Reemplaza la ruta con la ubicación correcta de tu imagen -->
+            </div>
+            <div id="sidebar" class="navbar-menu hidden">
+                <ul class="navbar-nav-side">
+                    <li class="nav-item"><a href="index.html" id="inicio" class="navbar-link">Inicio</a></li>
+                    <hr>
+                    <li class="nav-item"><a href="servicios.html" id="servicios" class="navbar-link">Servicios</a></li>
+                    <hr>
+                    <li class="nav-item"><a href="sobre_nosotros.html" id="sobre_nosotros" class="navbar-link">Sobre nosotros</a></li>
+                    <hr>
+                    <li class="nav-item"><a href="contacto.html" id="contacto" class="navbar-link">Contacto</a></li>
+                    <hr>
+                    <li class="nav-item"><a href="unite.html" id="unite" class="navbar-link">Unite a nosotros</a></li>
+                </ul>
+            </div>
+        </nav>
+      </header>
+    <main>            
+    <section id = "instalacionesE">
+
+            <section id="section1" class="section blue-section">
+                <div>
+                    <h1 class="titulo">¡Convertí tu hogar con Happy Home!
+                    </h1>
+                </div>
+            </section>
+
+            <section id="section2" class="section white-section">
+                <div class = "contenedor">
+                    <h1> ELECTRICIDAD DEL HOGAR </h1>
+                    <div class = "lista">
+                        <ul>
+                            <li><span>Instalaciones eléctricas</span>: Realizamos instalaciones desde cero, asegurándonos de que todos los 
+                                componentes cumplan con los estándares de seguridad.</li>
+                            <li><span>Reparaciones</span>: Detectamos y solucionamos cualquier fallo eléctrico, asegurando el 
+                                funcionamiento óptimo de tu sistema.</li>
+
+                            <li><span>Mantenimiento</span>: Ofrecemos servicios de mantenimiento preventivo para evitar problemas futuros 
+                                y garantizar la seguridad de tu hogar.</li>
+                            <li><span>Actualización de sistemas eléctricos</span>: Modernizamos instalaciones antiguas para mejorar la 
+                                eficiencia y seguridad.</li>
+                            <li><span>Confección de planos eléctricos</span>: Elaboramos planos detallados para nuevas construcciones o 
+                                renovaciones, asegurando una correcta distribución y uso de la energía en tu hogar.</li>
+                        </ul>
+                    </div>
+                    <div class = "img_IE">
+                        <img src="img/imgIE.jpeg" alt="Instalaciones eléctricas domiciliarias">
+                    </div>
+                </div>
+            </section>
+
+        </section>
+    </main>
+    
+    <div id="footer-placeholder"></div>
+</body>
+</html>
+
+
+
+<script>
+    
+    document.getElementById('img_justify').addEventListener('click', function() {
+        const menu = document.getElementById('sidebar');
+        menu.classList.toggle('hidden'); // Alterna la visibilidad
+    });
+
+    fetch('layout/footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer-placeholder').innerHTML = data;
+        })
+        .catch(error => console.error('Error al cargar el footer:', error));
+</script>
+
